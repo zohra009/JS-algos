@@ -2,8 +2,10 @@
 // Return a string in reverse
 // ex. reverseString('hello') === 'olleh'
 
+//Solution1
 function reverseString(str) {
-    return 'Let\'s Start'
+    const strArr = str.split('')  //1: split string into an array using .split() which splits into arr and separate into its own charater so "" w/no space
+    
   }
   
   
