@@ -4,11 +4,19 @@
 
 //Solution1
 function reverseString(str) {
-    const strArr = str.split('')  //1: split string into an array using .split() which splits into arr and separate into its own charater so "" w/no space
-    
+    const strArr = str.split(''); //1: split string into an array using .split() which splits into arr and separate into its own charater so "" w/no space
+    strArr.reverse(); //this reverses the arr [ 'o', 'l', 'l', 'e', 'h' ]
+    return strArr.join('')  //this joins it together (no space btw '')
+
+    console.log(strArr)
+  }
+
+  //cleaner Solution to prob 1
+  function reverseString(str) {
+    return str.split('').reverse().join('');
   }
   
-  
+ //---------------------------------------------------------------------------------------------------------------- 
   
   // CHALLENGE 2: VALIDATE A PALINDROME
   // Return true if palindrome and false if not
