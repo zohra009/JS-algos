@@ -10,12 +10,12 @@
 
 //     console.log(strArr)
 //   }
-
-//   // Solution 2 to prob 1
-//   function reverseString(str) {
-//     return str.split('').reverse().join('');
-//   }
-
+//////////////////////////////////////////////////////////////
+//  Solution 2 to prob 1
+// function reverseString(str) {
+//   return str.split('').reverse().join('');
+//  }
+    //////////////////////////////////////////////////////////////
   // solution 3 to prob 1 using for loop 
   
 //   function reverseString(str){
@@ -25,7 +25,7 @@
 //         } 
 //         return revString;
 //     }
-
+    //////////////////////////////////////////////////////////////
     //solution 4 to prob 1 
     // function reverseString(str){
     //     let revString = '';
@@ -34,7 +34,7 @@
     //     } 
     //     return revString;
     // }
-
+    //////////////////////////////////////////////////////////////
     //Solution 5 to Problem 1 using (for-of loop) ES6 JS
     // function reverseString(str){
     // let revString = '';
@@ -43,6 +43,7 @@
     //     } 
     //     return revString;
     // }
+    //////////////////////////////////////////////////////////////
      //Solution 6 to Problem 1 using for-each
      function reverseString(str){
         let revString = '';
