@@ -3,19 +3,56 @@
 // ex. reverseString('hello') === 'olleh'
 
 //Solution1
-function reverseString(str) {
-    const strArr = str.split(''); //1: split string into an array using .split() which splits into arr and separate into its own charater so "" w/no space
-    strArr.reverse(); //this reverses the arr [ 'o', 'l', 'l', 'e', 'h' ]
-    return strArr.join('')  //this joins it together (no space btw '')
+// function reverseString(str) {
+//     const strArr = str.split(''); //1: split string into an array using .split() which splits into arr and separate into its own charater so "" w/no space
+//     strArr.reverse(); //this reverses the arr [ 'o', 'l', 'l', 'e', 'h' ]
+//     return strArr.join('')  //this joins it together (no space btw '')
 
-    console.log(strArr)
-  }
+//     console.log(strArr)
+//   }
 
-  //cleaner Solution to prob 1
-  function reverseString(str) {
-    return str.split('').reverse().join('');
-  }
+//   // Solution 2 to prob 1
+//   function reverseString(str) {
+//     return str.split('').reverse().join('');
+//   }
+
+  // solution 3 to prob 1 using for loop 
   
+//   function reverseString(str){
+//         let revString = '';
+//         for(let i = str.length - 1; i >= 0; i-- ){  //decrease i by 1 if i >=0 AND str.length - 1 means we have 0-4 characters vs 0-5
+//             revString = revString + str[i]; //str[i] is the current character that is added to revstring
+//         } 
+//         return revString;
+//     }
+
+    //solution 4 to prob 1 
+    // function reverseString(str){
+    //     let revString = '';
+    //     for(let i = 0; i <= str.length - 1; i++ ){  
+    //         revString = str[i] + revString;
+    //     } 
+    //     return revString;
+    // }
+
+    //Solution 5 to Problem 1 using (for-of loop) ES6 JS
+    // function reverseString(str){
+    // let revString = '';
+    //     for(let char of str ){ //char could be anything  
+    //         revString = char + revString;
+    //     } 
+    //     return revString;
+    // }
+     //Solution 6 to Problem 1 using for-each
+     function reverseString(str){
+        let revString = '';
+        str.split('').forEach(function(char){  //to make str into arr use .split; then forEach takes a func & iterator (char)
+            revString = char + revString;
+        });
+        return revString;
+     }
+
+
  //---------------------------------------------------------------------------------------------------------------- 
   
   // CHALLENGE 2: VALIDATE A PALINDROME
