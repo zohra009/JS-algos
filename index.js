@@ -196,8 +196,16 @@ function addAll(...numbers) {
 //number greater than 1 whose only factors are 1 and itself
 // ex. sumAllPrimes(10) == 17
 
-function sumAllPrimes() {
-
+function sumAllPrimes(num) {
+  let total = 0;
+  //loop through up to 10
+  for(let i = 2; i <= num; i++){
+    //create func to chec =k if i is prime
+    if(checkForPrime(i) ){
+      //give total
+      total += i;
+    }
+  }
 
 }
 
