@@ -196,18 +196,56 @@ function addAll(...numbers) {
 //number greater than 1 whose only factors are 1 and itself
 // ex. sumAllPrimes(10) == 17
 
+/////////////////////////////////////////////
+//solution with explanations 
+
+// function sumAllPrimes(num) {
+//   let total = 0;
+
+//   function checkForPrime (i){
+//     //loop through whats passed in
+//     for(j = 2; j < i; j++) {
+//       //check for prime conditional needed to see if i is divisible by j
+//       if(i % j === 0){ //means divisble therefore NOT prime #
+//         return false;
+//       }
+//     }
+//     return true; // if NOT divisible its prime which is TRUE
+//   }
+//   //loop through up to 10
+//   for(let i = 2; i <= num; i++){
+//     //create func to check if i is prime
+//     if(checkForPrime(i)){
+//       //give total
+//       total += i;
+//     }
+//   }
+
+// }
+
+///////////////////////////////////////////////////////////////////
+
+//Solution to problem 2
 function sumAllPrimes(num) {
   let total = 0;
-  //loop through up to 10
-  for(let i = 2; i <= num; i++){
-    //create func to chec =k if i is prime
-    if(checkForPrime(i) ){
-      //give total
+
+  function checkForPrime(i) {
+    for (let j = 2; j < i; j++) {
+      if (i % j === 0) {
+        return false;
+      }
+    }
+    return true;
+  }
+
+  for (let i = 2; i <= num; i++) {
+    if (checkForPrime(i)) {
       total += i;
     }
   }
-
+  return total;
 }
+
 
 //---------------------------------------------------------------------------------------------------------------
 
@@ -215,7 +253,20 @@ function sumAllPrimes(num) {
 // Remove from the array whatever is in the following arguments. Return the leftover numbers in an array
 // ex. seekAndDestroy([2, 3, 4, 6, 6, 'hello'], 2, 6) == [3, 4, 'hello']
 
-function seekAndDestroy() {}
+//Solution 1 of Prob 3 : use argument, indexOf, filter
+function seekAndDestroy(arr) {
+  const args = Array.from(arguments);
+  function filterArr(arr){
+    //return True if NOT an arr; if no find = -1 for indexOf
+    return args.indexOf(arr) === -1;
+  } 
+  return arr.filter(filterArr);
+}
+//////////////////////////////////////////////////////
+/// Solution 2 of prob 3: ...rest, filter & includes
+function seekAndDestroy(arr, ...rest) {
+  return arr.filter(val => !rest.includes(val));
+}
 
 //---------------------------------------------------------------------------------------------------------------
 
@@ -225,7 +276,22 @@ function seekAndDestroy() {}
 // a = [-1, 150, 190, 170, -1, -1, 160, 180]
 // sortByHeight(a) == [-1, 150, 160, 170, -1, -1, 180, 190]
 
-function sortByHeight() {}
+function sortByHeight() {
+  function sortByHeight(a) {
+    //store all position in arr1; store values in arr2
+    const arr1 = [];
+    const arr2 = [];
+    
+    //forEach use to loop thru each value, val(is what is being sorted)and (i for position of -1)
+    a.forEach((val, i) => (val === -1 ? arr1.push(i) : arr2.push(val)));
+  
+    const sortArr = arr2.sort((a, b) => a - b);
+  
+    arr1.forEach((val, i) => sortArr.splice(arr1[i], 0, -1));
+  
+    return sortArr;
+  }
+}
 
 //---------------------------------------------------------------------------------------------------------------
 
@@ -236,7 +302,20 @@ function sortByHeight() {}
 // missingLetters("abcdefghjklmno") == "i"
 // missingLetters("abcdefghijklmnopqrstuvwxyz") == undefined
 
-function missingLetters() {}
+function missingLetters(str) {
+  let compare = str.charCodeAt(0);
+  let missing;
+
+  str.split('').map((char, i) => {
+    if (str.charCodeAt(i) == compare) {
+      ++compare;
+    } else {
+      missing = String.fromCharCode(compare);
+    }
+  });
+
+  return missing;
+}
 
 //---------------------------------------------------------------------------------------------------------------
 
@@ -245,10 +324,17 @@ function missingLetters() {}
 // ex.
 // evenOddSums([50, 60, 60, 45, 71]) == [170, 116]
 
-function evenOddSums() {} 
+function evenOddSums(arr) {
+  let evenSum = 0;
+  let oddSum = 0;
+
+  arr.forEach(num => (num % 2 === 0 ? (evenSum += num) : (oddSum += num)));
+
+  return [evenSum, oddSum];
+}
 
   //----------------------------------------------------------------------------------------------------------------
   // Call Function
-  const output = addAll(6,2,3);
+  const output = seekAndDestroy(([2, 3, 4, 6, 6, 'hello'], 2, 6) == [3, 4, 'hello']);
   
   console.log(output);
