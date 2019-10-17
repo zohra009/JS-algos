@@ -324,6 +324,7 @@ function missingLetters(str) {
 // ex.
 // evenOddSums([50, 60, 60, 45, 71]) == [170, 116]
 
+//EASY 
 function evenOddSums(arr) {
   let evenSum = 0;
   let oddSum = 0;
@@ -335,6 +336,9 @@ function evenOddSums(arr) {
 
   //----------------------------------------------------------------------------------------------------------------
   // Call Function
-  const output = seekAndDestroy(([2, 3, 4, 6, 6, 'hello'], 2, 6) == [3, 4, 'hello']);
+  // const output = seekAndDestroy(([2, 3, 4, 6, 6, 'hello'], 2, 6) == [3, 4, 'hello']);
   
-  console.log(output);
+  // console.log(output);
+
+
+
