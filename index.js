@@ -351,6 +351,8 @@ function longestWord(sen) {
   // SOLUTION 3 - Only return an array if multiple words, otherwise return a string
 }
 
+//------------------------------------------------------------------------------------------------------------
+
 // CHALLENGE 2: ARRAY CHUNKING
 // Split an array into chunked arrays of a specific length
 // ex. chunkArray([1, 2, 3, 4, 5, 6, 7], 3) === [[1, 2, 3],[4, 5, 6],[7]]
