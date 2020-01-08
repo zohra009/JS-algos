@@ -8,6 +8,7 @@ function repeatString(str, times) = {
     let repStr = '';
     //while loop check to make sure it runs, so >0
     while(times > 0){
-
+    // Same as repeatedString = repeatedString + string;
+        repStr += str 
     }
 }
