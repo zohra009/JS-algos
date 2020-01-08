@@ -3,3 +3,7 @@
 // Step 1. Create an empty string that will host the repeated string
 // Step 2. Set the While loop with (times > 0) as the condition to check
 // Step 3. Return the repeated string
+
+function repeatString = {
+    let repStr = '';
+}
