@@ -20,7 +20,11 @@ function repeatString(str, times) = {
 }
 
 /////////////////////////////////////////////
-//solution 2 
+//solution 2 using recursion 
+//Recursion is a technique for iterating over an operation by having a function call itself repeatedly 
+//until it arrives at a result.
+//first is a base case: this is a statement, usually within a conditional clause like if, that stops the recursion.
+//2nd recursive case: this is the statement where the recursive function is called on itself.
 function repeatStringNumTimes(string, times) {
     //if times is negative then return empty string
     if(times < 0) 
