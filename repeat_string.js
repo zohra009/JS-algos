@@ -4,6 +4,8 @@
 // Step 2. Set the While loop with (times > 0) as the condition to check
 // Step 3. Return the repeated string
 
+//Solution 1
+
 function repeatString(str, times) = {
     //initialize empty str to hold repeat str
     let repStr = '';
@@ -11,8 +13,24 @@ function repeatString(str, times) = {
     while(times > 0){
     // Same as repeatedString = repeatedString + string;
         repStr += str 
-        // if times was 3 times for "a" it would repeat a(3)+a(2)+a(1) so final result 'aaa' decrementing
+        // if times was 3 times for "a" it would repeat a(2)+a(1)+a(0) so final result 'aaa' decrementing
         // Same as times = times - 1
         times --  
     }
 }
+
+/////////////////////////////////////////////
+//solution 2 
+function repeatStringNumTimes(string, times) {
+    //if times is negative then return empty string
+    if(times < 0) 
+      return "";
+    //if times is equal to 1 then return that str once
+    if(times === 1) 
+      return string;
+      //otherwise return the str plus number of times that function is being called upon 
+    else 
+      return string + repeatStringNumTimes(string, times - 1);
+  }
+  repeatStringNumTimes("abc", 3);
+
