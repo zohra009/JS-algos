@@ -58,3 +58,13 @@ function repeatStringNumTimes(string, times) {
   
   repeatStringNumTimes("abc", 3);
 
+  //////Solution 3 simplified////////////
+  function repeatStringNumTimes(string, times) {
+      //simplify using ternary operator
+    times > 0 ? string.repeat(times) : "";
+  }
+  repeatStringNumTimes("abc", 3);
+
+ 
+ 
+
