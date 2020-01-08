@@ -38,3 +38,23 @@ function repeatStringNumTimes(string, times) {
   }
   repeatStringNumTimes("abc", 3);
 
+  /////////////////////////////////////////////////
+  //Solution 3 with .repeat() method 
+  //The repeat() method constructs and returns a new string which contains the specified number 
+  //of copies of the string on which it was called, concatenated together.
+  function repeatStringNumTimes(string, times) {
+    //Step 1. If times is positive, return the repeated string
+    // i.e. (3 > 0) => true
+    if (times > 0) { 
+    // return "abc".repeat(3); => return "abcabcabc";
+      return string.repeat(times); 
+    }
+    
+    //Step 2. Else if times is negative, return an empty string 
+    else {
+      return "";
+    }
+  }
+  
+  repeatStringNumTimes("abc", 3);
+
