@@ -4,6 +4,10 @@
 // Step 2. Set the While loop with (times > 0) as the condition to check
 // Step 3. Return the repeated string
 
-function repeatString = {
+function repeatString(str, times) = {
     let repStr = '';
+    //while loop check to make sure it runs, so >0
+    while(times > 0){
+
+    }
 }
