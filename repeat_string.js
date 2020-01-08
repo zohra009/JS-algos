@@ -5,10 +5,14 @@
 // Step 3. Return the repeated string
 
 function repeatString(str, times) = {
+    //initialize empty str to hold repeat str
     let repStr = '';
-    //while loop check to make sure it runs, so >0
+    //while loop check to make sure it runs, so  if times > 0 the repStr is added in addition to original str
     while(times > 0){
     // Same as repeatedString = repeatedString + string;
         repStr += str 
+        // if times was 3 times for "a" it would repeat a(3)+a(2)+a(1) so final result 'aaa' decrementing
+        // Same as times = times - 1
+        times --  
     }
 }
