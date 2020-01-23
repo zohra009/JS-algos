@@ -11,10 +11,10 @@
 function anagrams(stringA, stringB) {
     //sort the string in alphabetical order and lowerCase
     //compare the lengths to yeild T/F (boolean)
-    //.replace(/[^\w]/g) removal of all non-alphanumeric characters (punctuation, spaces and symbols)
+    //.replace(/[^\w]/g, "") removal of all non-alphanumeric characters (punctuation, spaces and symbols) and replace with empty string hence "" after g
     //.replace(/[^0-9a-z]/gi, '') is used for alphanumerical and case sensitive
-    let string1 = stringA.replace(/[^\w]/g).toLowerCase().split('').sort().join('')
-    let string2 = stringB.replace(/[^\w]/g).toLowerCase().split('').sort().join('')
+    let string1 = stringA.replace(/[^\w]/g, "").toLowerCase().split('').sort().join('')
+    let string2 = stringB.replace(/[^\w]/g, "").toLowerCase().split('').sort().join('')
     return string1.length === string2.length
 }
 console.log(anagrams("Hello There"))
