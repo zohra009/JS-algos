@@ -11,8 +11,9 @@
 function anagrams(stringA, stringB) {
     //sort the string in alphabetical order and lowerCase
     //compare the lengths to yeild T/F (boolean)
-    let string1 = stringA.toLowerCase().split('').sort().join('')
-    let string2 = stringB.toLowerCase().split('').sort().join('')
+    //.replace(/[^\w]/g) removal of all non-alphanumeric characters (punctuation, spaces and symbols)
+    let string1 = stringA.replace(/[^\w]/g).toLowerCase().split('').sort().join('')
+    let string2 = stringB.replace(/[^\w]/g).toLowerCase().split('').sort().join('')
     return string1.length === string2.length
 }
 console.log(anagrams("Hello There"))
