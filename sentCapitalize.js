@@ -7,6 +7,11 @@
 //   capitalize('a lazy fox') --> 'A Lazy Fox'
 //   capitalize('look, it is working!') --> 'Look, It Is Working!'
 
-function capitalize(str) {}
+function capitalize(str) {
+    //split str into arr of words 
+    //loop through the arr & take first letter of every word and .toUpperCase()
+    //return the phrase
+    
+}
 
 module.exports = capitalize;
