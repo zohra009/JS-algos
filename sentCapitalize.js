@@ -13,13 +13,13 @@ function capitalize(str) {
     //split str into arr of words 
     //use .slice(beginIdex, endIndex) which means first letter(1) of first word(0) written .slice(0,1)
     //return the phrase
-    let word = [];
+    let words = [];
     for(let word of str.split(' ')){
-        word.push(word[0].toUpperCase() + word.slice(1))
+        words.push(word[0].toUpperCase() + word.slice(1))
     }
      
     //join the phrase together 
-    return word.join(' ')
+    return words.join(' ')
    
    
 }
