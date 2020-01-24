@@ -8,10 +8,20 @@
 //   capitalize('look, it is working!') --> 'Look, It Is Working!'
 
 function capitalize(str) {
+    //initialize word arr
+    //loop through the arr & take first letter of every word and .toUpperCase() and concat with .slice()
     //split str into arr of words 
-    //loop through the arr & take first letter of every word and .toUpperCase()
+    //use .slice(beginIdex, endIndex) which means first letter(1) of first word(0) written .slice(0,1)
     //return the phrase
-    
+    let word = [];
+    for(let word of str.split(' ')){
+        word.push(word[0].toUpperCase() + word.slice(1))
+    }
+     
+    //join the phrase together 
+    return word.join(' ')
+   
+   
 }
 
 module.exports = capitalize;
