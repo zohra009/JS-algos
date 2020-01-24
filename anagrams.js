@@ -15,6 +15,6 @@ function anagrams(stringA, stringB) {
     //.replace(/[^0-9a-z]/gi, '') is used for alphanumerical and case sensitive
     let string1 = stringA.replace(/[^\w]/g, "").toLowerCase().split('').sort().join('')
     let string2 = stringB.replace(/[^\w]/g, "").toLowerCase().split('').sort().join('')
-    return string1.length === string2.length
+    return string1 === string2
 }
 console.log(anagrams("Hello There"))
