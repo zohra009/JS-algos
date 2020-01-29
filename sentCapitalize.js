@@ -15,6 +15,7 @@ function capitalize(str) {
     //return the phrase
     let words = [];
     for(let word of str.split(' ')){
+        //starts at index 0 and concats the rest of the word
         words.push(word[0].toUpperCase() + word.slice(1))
     }
      
