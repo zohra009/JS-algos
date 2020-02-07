@@ -5,5 +5,4 @@ function repeatStringNumTimes(string, times) {
    } else {
        return ""
    }
-
 }
